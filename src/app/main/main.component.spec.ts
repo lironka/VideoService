@@ -5,13 +5,10 @@ import { HeaderComponent } from '../header/header.component';
 import { VideoItemComponent } from '../video-item/video-item.component';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { of } from 'rxjs';
 
 describe('MainComponent', () => {
   let component: MainComponent;
   let fixture: ComponentFixture<MainComponent>;
-  let testData: {};
-  let getVideosSpy: any;
   let quoteEl: any;
 
   beforeEach(async(() => {

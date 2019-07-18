@@ -1,6 +1,11 @@
 {
-  "name": "videocites",
-  "version": "0.0.0",
+  "name": "videoservice",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lironka/VideoService.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
