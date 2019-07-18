@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div class="container pt-3">
+  <div class="row">
+    <div class="col d-flex flex-wrap justify-content-center">
+      <ng-container *ngIf="(videos$ | async) as videos else loading">
+        <ng-container *ngIf="videos.length > 0 else noaccess">
+          <app-video-item *ngFor="let video of videos"
+            class="videos align-items-center d-flex justify-content-center videos" [item]="video"></app-video-item>
+        </ng-container>
+      </ng-container>
+
+      <ng-template #noaccess>
+        <div class="alert alert-danger" role="alert">
+          We have problem with server. Please try again later
+        </div>
+      </ng-template>
+
+      <ng-template #loading>
+        Loading...
+      </ng-template>
+    </div>
+  </div>
+</div>

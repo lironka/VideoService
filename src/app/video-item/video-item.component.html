@@ -1,0 +1,29 @@
+<div *ngIf="!item.video_url else videoexist" class="novideo d-flex justify-content-center align-items-center">
+  Video not exist</div>
+
+<ng-template #videoexist>
+  <ng-container *ngIf="item.embed_code; then embeded; else videtag"></ng-container>
+</ng-template>
+
+<ng-template #embeded>
+  <iframe [id]="item" scrolling="no" [src]="item['embed_code']" frameborder="0" allowfullscreen></iframe>
+</ng-template>
+
+<ng-template #videtag>
+  <video controls [poster]="item.thumb_url">
+    <source [src]="item.video_url" (error)="hanldeErrorVideo(item)">
+    Your browser does not support the video tag.
+  </video>
+  <div class="novideo poster d-flex justify-content-center align-items-center"
+    [ngStyle]="{'background':'black url(' + item.thumb_url + ') no-repeat center center', 'background-size': 'contain'} ">
+    ▶</div>
+</ng-template>
+
+
+<figcaption class="figure-caption">
+  <h6 class="text-body">{{item.title}}</h6>
+  <p>
+    <span *ngIf="item.duration">Duration: {{ item.duration }}</span>
+    <span *ngIf="item.published" class="float-right">Published: {{ item.published}}</span>
+  </p>
+</figcaption>

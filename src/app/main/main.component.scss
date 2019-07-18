@@ -1,0 +1,15 @@
+.bd-placeholder-img {
+  text-anchor: middle;
+}
+
+.videos {
+  width: 400px;
+  height: 224px;
+  position: relative;
+  background-color: black;
+  margin: 1rem 1rem 6rem;
+
+  &:hover ::ng-deep .poster {
+    z-index: -1;
+  }
+}
