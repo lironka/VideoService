@@ -14,7 +14,7 @@ If needs do `npm install`.
 
 Run `cd server`
 
-Run `npm start` for a dev backend server. Navigate to [`http://localhost:3000/`(http://localhost:3000/). The backend will automatically reload if you change any of the source files.
+Run `npm start` for a dev backend server. Navigate to [`http://localhost:3000/`](http://localhost:3000/). The backend will automatically reload if you change any of the source files.
 
 ## Build
 
